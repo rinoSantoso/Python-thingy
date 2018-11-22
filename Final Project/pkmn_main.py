@@ -16,7 +16,7 @@ def red_sequence(red_choice):
 
         elif red_choice[1].getCategory() == "status":
             if red_choice[1].getMoveType() == "opponent":
-                gf.hit_check(red_choice, gf.red_active_pokemon, gf.blue_active_pokemon)
+                gf.hit_check(red_choice[1], gf.red_active_pokemon, gf.blue_active_pokemon)
                 gf.change_status_stage("red", red_choice[1])
             elif red_choice[1].getMoveType() == "self":
                 if red_choice[1].getEffect() == "heal":
